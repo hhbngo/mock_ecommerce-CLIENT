@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    padding: 12px 0px 8px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    position: relative;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.description p {
+    color: rgb(126, 126, 126);
+    margin-bottom: 5px;
+}
+
+
+.container img {
+    border-radius: 6px;
+    margin: 10px;
+    width: 54px;
+    height: 57px;
+}
+
+.description h3,
+.description h5 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.154px;
+    color: black;
+    margin: 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,172 @@
+.container {
+    padding: 20px;
+    margin-top: 48px;
+    margin-bottom: 150px;
+}
+
+.title {
+    grid-area: title;
+}
+
+.container h1 {
+    line-height: 45px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    font-size: 20px;
+    color: rgb(129, 129, 129);
+    margin-bottom: 10px;
+    grid-area: price;
+}
+
+.interacts {
+    grid-area: interacts;
+}
+
+.interacts input {
+    width: clamp(50px, 25%, 80px);
+    padding: 0 12px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 7px;
+    display: block;
+    width: clamp(180px, 70%, 200px);
+    border: 2px solid black;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
+
+.image {
+    padding: 20px;
+    margin-bottom: 10px;
+    grid-area: image;
+}
+
+.primary {
+    background-color: white;
+}
+
+.secondary {
+    background-color: black;
+    color: white;
+}
+
+.info {
+    grid-area: info;
+}
+
+.tabs {
+    display: flex;
+    cursor: pointer;
+}
+
+.tabs p {
+    margin: 0;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.tabs .active {
+    border-bottom: 2px solid rgb(129, 129, 129);
+}
+
+.text_block {
+    padding: 10px;
+}
+
+.interacts {
+    margin-bottom: 30px;
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        grid-template-rows: auto auto auto 1fr;
+        grid-template-areas:
+            "image title"
+            "image price"
+            "image interacts"
+            "image info";
+        padding: 100px 40px;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    .image {
+        padding: 40px;
+        padding-top: 0;
+        align-self: start;
+    }
+
+    .price {
+        align-self: end;
+        margin-bottom: 20px;
+    }
+
+    .interacts {
+        margin-bottom: 0;
+        align-self: end;
+        display: flex;
+    }
+
+    select {
+        margin-right: 10px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .info {
+        align-self: center;
+    }
+}
+
+@media all and (min-width: 1156px) {
+    .container {
+        grid-template-columns: 3.5fr 4fr;
+        padding-top: 0;
+        padding-left: 80px;
+    }
+
+    .info {
+        max-width: 600px;
+        align-self: start;
+        padding-top: 30px;
+    }
+
+    .image {
+        padding: 120px;
+    }
+
+    .title {
+        margin-top: 120px;
+        padding-bottom: 30px;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    .container {
+        padding-left: 200px;
+    }
+}

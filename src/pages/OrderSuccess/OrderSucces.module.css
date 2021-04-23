@@ -1,0 +1,13 @@
+.container {
+    min-height: 100vh;
+    padding: 80px;
+}
+
+.container button {
+    padding: 20px;
+    color: white;
+    border: 0;
+    background-color: black;
+    margin-top: 20px;
+    border-radius: 4px;
+}

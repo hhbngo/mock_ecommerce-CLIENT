@@ -1,0 +1,38 @@
+.categories_card {
+    width: 300px;
+    height: 300px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 2px;
+    margin-bottom: 25px;
+    margin-right: 13px;
+    margin-left: 13px;
+    position: relative;
+    background-size: cover;
+}
+
+.card_overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+}
+
+.card_overlay p {
+    color: white;
+    font-size: 32px;
+}
+
+@media all and (min-width: 768px) {
+    .categories_card {
+        margin-bottom: 40px;
+        margin-right: 23px;
+        margin-left: 23px;
+    }
+}

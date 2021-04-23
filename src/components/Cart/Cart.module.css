@@ -1,0 +1,21 @@
+.interacts {
+    padding: 20px 0;
+    clear: both;
+}
+
+.interacts button {
+    margin-left: 10px;
+    float: right;
+    border: 0;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 4px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    min-width: 83px;
+}
+
+.container span {
+    font-weight: bold;
+}

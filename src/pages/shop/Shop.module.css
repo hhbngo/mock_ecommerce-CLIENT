@@ -1,0 +1,104 @@
+.container {
+    padding: 10px;
+    margin-top: 48px;
+}
+
+.categories {
+    width: 100%;
+    padding: 0px 15px 25px;
+}
+
+.categories h1 {
+    font-size: 24px;
+}
+
+.categories li {
+    padding: 0 0 5px 5px;
+    margin: 10px 0 0 0;
+
+}
+
+.categories a {
+    color: rgb(129, 129, 129);
+}
+
+.categories a:hover {
+    color: black
+}
+
+.sortbar {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sortbar select {
+    padding: 5px 6px;
+    margin-right: auto;
+    color: black;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 4px;
+}
+
+.sortbar p {
+    margin: 0 10px 0 0;
+}
+
+.sortbar span {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.showcase {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-rows: auto;
+    min-height: 70vh;
+    padding: 5px;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 5fr;
+        grid-template-areas:
+            "sidebar main";
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+
+    }
+
+    .sortbar {
+        margin-bottom: 0;
+        margin-left: auto;
+        width: 95%;
+    }
+
+    .sortbar select {
+        margin-right: 10px;
+    }
+
+    .categories {
+        margin-bottom: 0;
+    }
+
+    .showcase {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}

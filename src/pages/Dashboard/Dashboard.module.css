@@ -1,0 +1,162 @@
+.container {
+    padding: 10px;
+    margin-top: 48px;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 5px;
+}
+
+.categories {
+    width: 100%;
+    padding: 0px 15px 25px;
+}
+
+.categories h1 {
+    font-size: 24px;
+}
+
+.categories li {
+    padding: 0 0 5px 5px;
+    margin: 10px 0 0 0;
+
+}
+
+.categories a {
+    color: rgb(129, 129, 129);
+}
+
+.categories a:hover {
+    color: black
+}
+
+.password_form {
+    width: clamp(300px, 100%, 400px);
+    padding: 10px;
+}
+
+.password_form label {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.password_form input {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.create_form {
+    width: clamp(300px, 100%, 750px);
+    padding: 10px;
+}
+
+.create_form label {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.create_form input,
+.create_form textarea,
+.create_form select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.create_form input[type=number] {
+    width: 50%;
+    display: block;
+}
+
+.create_form button,
+.password_form button {
+    color: white;
+    background-color: black;
+    padding: 10px 5px;
+    border: 0;
+    border-radius: 5px;
+    width: 100px;
+    float: right;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product_list {
+    width: clamp(300px, 100%, 800px);
+}
+
+.product_label {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(300px, 100%, 600px);
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product_label p {
+    margin: 0;
+}
+
+.product_interact {
+    cursor: pointer;
+}
+
+.product_interact span {
+    margin-left: 10px;
+}
+
+.error {
+    width: clamp(200px, 100%, 400px);
+    padding: 10px;
+    background-color: rgb(245, 172, 163);
+    color: rgb(207, 35, 35);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.success {
+    width: clamp(200px, 100%, 400px);
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1.2fr 5fr;
+        grid-template-areas:
+            "sidebar main";
+    }
+
+    .main {
+        grid-area: main;
+        padding: 0;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+
+    }
+}

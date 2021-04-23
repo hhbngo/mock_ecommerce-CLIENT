@@ -1,0 +1,92 @@
+.container {
+    padding: 35px 30px 10px 30px;
+    width: 100%;
+    min-height: 200px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "socials"
+        "links"
+        "newsletter"
+        "copyright"
+    ;
+}
+
+.container h1 {
+    color: white;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.newsletter {
+    grid-area: newsletter;
+    margin-bottom: 15px;
+}
+
+.newsletter input {
+    padding-left: 10px;
+    width: 150px;
+    height: 35px;
+    border-radius: 2px;
+    border: 0;
+    margin-right: 3px;
+}
+
+.newsletter button {
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 34px;
+    font-weight: bold;
+}
+
+.socials {
+    grid-area: socials;
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+.links {
+    grid-area: links;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.copyright {
+    grid-area: copyright;
+    color: rgb(161, 161, 161);
+    justify-self: center;
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        grid-template-columns: 1.04fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "newsletter socials links"
+            "copyright copyright copyright";
+        padding: 30px 60px 10px 60px;
+    }
+
+    .newsletter {
+        margin-left: 15px;
+    }
+
+    .socials {
+        justify-self: center;
+    }
+
+    .copyright {
+        justify-self: right;
+    }
+
+}
