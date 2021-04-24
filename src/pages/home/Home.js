@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useHistory} from 'react-router-dom';
 import classes from './Home.module.css';
 import CategoryCard from './CategoryCards/CategoryCard';
@@ -44,6 +44,7 @@ const CATEGORY_MOCK = [
 
 const Home = () => {
     let history = useHistory();
+    useEffect(() => window.scrollTo(0,0), []);
 
     return <div className={classes.container}>
         <div className={classes.banner}>
