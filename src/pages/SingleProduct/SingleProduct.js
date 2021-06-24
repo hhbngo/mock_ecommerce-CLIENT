@@ -25,6 +25,8 @@ const SingleProduct = ({match}) => {
     }, [slug]);
 
     const handleAddToCart = () => {
+        const num = parseInt(qty);
+        if (typeof num !== 'number' || num < 1) return alert('Invalid quantity!') 
         dispatch(addToBag({...product, quantity: parseInt(qty)}, auth.token));
     }
 

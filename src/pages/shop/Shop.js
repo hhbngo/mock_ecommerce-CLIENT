@@ -23,6 +23,14 @@ const Shop = ({match}) => {
         })
     }, [category]);
 
+    const renderPhantoms = () => {
+        let amountToRender = 5 - products.length;
+        return (
+            Array.from(Array(amountToRender))
+            .map((n, i) => <ProductCard key={i} phantom/>)
+        );
+    }
+
     return <div className={classes.container}>
         <div className={classes.sidebar}>
             <div className={classes.categories}>
@@ -54,8 +62,11 @@ const Shop = ({match}) => {
             {loading
                 ? <Loading height="35vh"/> 
                 : <div className={classes.showcase}>
-                    {products.length === 0 ? <p style={{padding: '10px'}}>No products currently listed.</p> :
-                    products.map(p => <ProductCard key={p._id} product={p}/>)}
+                    {products.length === 0 
+                        ? <p style={{padding: '10px'}}>No products currently listed.</p> 
+                        : products.map(p => <ProductCard key={p._id} product={p}/>)
+                    }
+                    {products.length <= 4 && renderPhantoms()}
                 </div>
             }
         </div>

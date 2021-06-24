@@ -62,7 +62,7 @@ const Cart = ({cart}) => {
         </p>: null}
         {bag.length > 0 ?
         <div className={classes.interacts}>
-            <button onClick={handleGoToCheckout}>{loading ? <LoadingOutlined/> : auth ? 'Checkout' :  'Log In to checkout'}</button>
+            <button onClick={handleGoToCheckout}>{loading ? <LoadingOutlined/> : auth ? 'Checkout' :  'Log In To Checkout'}</button>
             <button onClick={() => dispatch({type: 'TOGGLE_CART'})}>Continue Shopping</button>
         </div> : null}
     </div>

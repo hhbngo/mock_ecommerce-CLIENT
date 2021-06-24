@@ -5,6 +5,7 @@
 
 .interacts button {
     margin-left: 10px;
+    margin-top: 4px;
     float: right;
     border: 0;
     color: white;
@@ -13,7 +14,7 @@
     border-radius: 4px;
     letter-spacing: .5px;
     cursor: pointer;
-    min-width: 83px;
+    min-width: 150px;
 }
 
 .container span {
