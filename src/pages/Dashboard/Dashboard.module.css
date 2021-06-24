@@ -111,10 +111,12 @@
 
 .product_label p {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .product_interact {
     cursor: pointer;
+    min-width: 80px;
 }
 
 .product_interact span {

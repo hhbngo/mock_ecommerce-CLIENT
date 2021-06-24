@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom'
 import { getProducts, featureProduct, deleteProduct } from '../../functions/product';
 import classes from './Dashboard.module.css';
@@ -8,22 +8,25 @@ import { toast } from 'react-toastify';
 
 const { Panel } = Collapse;
 
-let initialValues = [
-    { name: 'T-shirts', slug: 't-shirts', items: [], page: 1, loaded: false },
-    { name: 'Sweaters', slug: 'sweaters', items: [], page: 1, loaded: false },
-    { name: 'Outerwear', slug: 'outerwear', items: [], page: 1, loaded: false },
-    { name: 'Hats', slug: 'hats', items: [], page: 1, loaded: false },
-    { name: 'Jewelry', slug: 'jewelry', items: [], page: 1, loaded: false },
-    { name: 'Accessories', slug: 'accessories', items: [], page: 1, loaded: false }
-]
+const createInitialSlice = name => ({
+    name, 
+    slug: name.charAt(0).toLowerCase() + name.slice(1), 
+    items: [], 
+    page: 1, 
+    loaded: false
+});
+
+let INITIAL_VALUES = [
+    'T-shirts', 'Sweaters', 'Outerwear', 'Hats', 'Jewelry', 'Accessories'
+].map(category => createInitialSlice(category));
 
 const Products = ({user}) => {
     let history = useHistory();
-    const [productsInfo, setProductsInfo] = useState(initialValues);
+    const [productsInfo, setProductsInfo] = useState(INITIAL_VALUES);
 
     useEffect(() => {
         window.scrollTo(0,0);
-    }, [])
+    }, []);
 
     const getCategoryItems = async (name) => {
         const selected = productsInfo.find( e => e.slug === name);
